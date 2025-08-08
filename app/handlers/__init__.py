@@ -1,6 +1,7 @@
 """
 Handlers package.
 
+This package contains various bot handlers (messages, callbacks, errors).
 This is where you place aiogram/telegram bot command and message handlers, e.g.:
 - start.py: /start command handler
 - promo.py: promo code flow

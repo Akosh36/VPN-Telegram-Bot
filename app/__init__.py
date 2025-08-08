@@ -1,6 +1,5 @@
 """
 App package
-
 This package hosts the modularized code for the Telegram VPN bot.
 Sections are organized into subpackages:
 - handlers: command and message handlers

@@ -1,6 +1,5 @@
 """
 Configuration module for the Telegram VPN bot.
-
 This centralizes environment-driven settings so that future refactoring
 can import from a single place. For now, this file is not wired into the
 legacy main.py to avoid breaking changes, but new modules should import
@@ -10,7 +9,12 @@ from here.
 from __future__ import annotations
 
 import os
+import logging
 from pathlib import Path
+
+# Configure logging
+logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(name)s: %(message)s")
+logger = logging.getLogger(__name__)
 
 # Base directories
 PROJECT_ROOT: Path = Path(__file__).resolve().parents[1]
@@ -34,4 +38,5 @@ __all__ = [
     "USERS_FILE_NAME",
     "USERS_FILE_PATH",
     "DEBUG",
+    "logger", # Added logger to __all__
 ]
